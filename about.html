@@ -97,23 +97,52 @@
             <div class="row g-5">
 
                 <!-- Get In Touch -->
+                <!-- Get In Touch -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Get In Touch
                     </h4>
-                    <p class="mb-3">
-                        Office address: Office No 1, 1st Floor, Noorani Market, District 5, Kandahar, Afghanistan.
+                    <p class="mb-0">
+                        <i class="fa fa-map-marker-alt text-primary me-3"></i>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Boldak+main+road,+Noorani+market,+Kandahar,+Afghanistan"
+                            target="_blank" style="text-decoration: none; color: inherit;">
+                            Factory Add: Boldak main road, 1 Noorani market, Kandahar, Afghanistan
+                        </a>
                     </p>
+                    <!-- Address with map link -->
+                    <p class="mb-3">
+                        <i class="fa fa-map-marker-alt text-primary me-3"></i>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Noorani+Market,+District+5,+Kandahar,+Afghanistan"
+                            target="_blank" style="text-decoration: none; color: inherit;">
+                            Office No 1, 1st Floor, Noorani Market, District 5, Kandahar, Afghanistan
+                        </a>
+                    </p>
+
+                    <!-- Email clickable -->
                     <p class="mb-2">
                         <i class="fa fa-envelope text-primary me-3"></i>
-                        Noorzaland.kdr@gmail.com
+                        <a href="mailto:Noorzaland.kdr@gmail.com" style="text-decoration: none; color: inherit;">
+                            Noorzaland.kdr@gmail.com
+                        </a>
+                    </p>
+
+                    <!-- WhatsApp clickable -->
+                    <p class="mb-0">
+                        <i class="fab fa-whatsapp text-success me-3"></i>
+                        <a href="https://wa.me/93704686246" target="_blank"
+                            style="text-decoration: none; color: inherit;">
+                            +93 70 468 6246
+                        </a>
                     </p>
                     <p class="mb-0">
-                        <i class="fa fa-phone-alt text-primary me-3"></i>
-                        +93 704 686 246 <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+93 705 434 114
+                        <i class="fab fa-whatsapp text-success me-3"></i>
+                        <a href="https://wa.me/93704686246" target="_blank"
+                            style="text-decoration: none; color: inherit;">
+                            +93 70 543 4114
+                        </a>
                     </p>
                 </div>
+
 
                 <!-- Quick Links -->
                 <div class="col-lg-3 col-md-6">
@@ -158,11 +187,22 @@
                     <p class="mb-3">
                         Send us your email or feedback. We would love to hear from you.
                     </p>
-                    <form>
-                        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
-                        <textarea class="form-control mb-3" rows="3" placeholder="Your Message"></textarea>
-                        <button class="btn btn-primary w-100">Send Message</button>
+                    <!-- Netlify Form -->
+                    <form name="contact" method="POST" data-netlify="true">
+                        <!-- Required hidden input for Netlify -->
+                        <input type="hidden" name="form-name" value="contact">
+
+                        <!-- Email input -->
+                        <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+
+                        <!-- Message textarea -->
+                        <textarea name="message" class="form-control mb-3" rows="3" placeholder="Your Message"
+                            required></textarea>
+
+                        <!-- Submit button -->
+                        <button class="btn btn-primary w-100" type="submit">Send Message</button>
                     </form>
+
                 </div>
 
             </div>
