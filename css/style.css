@@ -97,9 +97,16 @@
 }
 
 .hero-header {
-    background: url(../img/teampic.jpg) top right no-repeat;
+    background-image: url("../img/teampic.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    min-height: 100vh;            /* 🔑 MOST IMPORTANT */
+    display: flex;
+    align-items: center;
 }
+
+
 
 .service-item {
     position: relative;
